@@ -31,20 +31,22 @@ header h1 {
     font-size: 6vh;
 }
 
-body > img {
-    height: 30vh;
-}
-
 header p {
     font-family: "JetBrains Mono", monospace;
+    height: 4em;
     letter-spacing: -0.5px;
-    margin: 0 10px;
     font-size: 2vh;
+    margin: auto 50px;
+}
+
+body > img {
+    height: 30vh;
+    flex-grow: 1;
 }
 
 #extras {
     text-align: center;
-    padding: 10px;
+    padding-bottom: 10px;
 }
 
 #extras h2 {
@@ -65,7 +67,7 @@ header p {
 #extras li {
     font-size: 2vh;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 #extras a {
