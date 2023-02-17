@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("jbmono/jetbrainsmono-variablefont_wght-webfont.woff2") format("woff2");
+    src: url("jbmono/jetbrainsmono-variablefont_wght-webfont.woff") format("woff");
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcd1ab;
+    font-family: "Gordita", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Gordita", sans-serif;
+    font-size: 6vh;
+}
+
+body > img {
+    height: 30vh;
+}
+
+header p {
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: -0.5px;
+    margin: 0 10px;
+    font-size: 2vh;
+}
+
+#extras {
+    text-align: center;
+    padding: 10px;
+}
+
+#extras h2 {
+    font-size: 3vh;
+    color: #555;
+}
+
+#extras p {
+    font-size: 2vh;
+    color: #777;
+}
+
+#extras ul {
+    list-style: none;
+    padding: 0;
+}
+
+#extras li {
+    font-size: 2vh;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#extras a {
+    color: grey;
+    text-decoration: none;
+}
