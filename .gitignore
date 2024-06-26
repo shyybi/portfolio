@@ -13,3 +13,5 @@ package.json
 package-lock.json
 tailwindcss.xml
 /src/styles.css
+/.idea/prettier.xml
+/.idea/codeStyles/Project.xml
