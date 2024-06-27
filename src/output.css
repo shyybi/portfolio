@@ -554,16 +554,8 @@ video {
   --tw-contain-style:  ;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
-}
-
-.relative {
-  position: relative;
 }
 
 .bottom-12 {
@@ -602,106 +594,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-bounce {
-  animation: bounce 1s infinite;
-}
-
-.animate-\[fadeOut_1s_ease_in_forwards_5s\] {
-  animation: fadeOut 1s ease in forwards 5s;
-}
-
-.animate-\[bouncefadeOut_1s_ease_in_forwards_5s\] {
-  animation: bouncefadeOut 1s ease in forwards 5s;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-\[bounce_1s_5\2c fadeOut_1s_ease_in_forwards_5s\] {
-  animation: bounce 1s 5, fadeOut 1s ease in forwards 5s;
-}
-
-.animate-\[fadeOut_1s\] {
-  animation: fadeOut 1s;
-}
-
-.animate-\[fadeOut_1s_forwards\] {
-  animation: fadeOut 1s forwards;
-}
-
-.animate-\[fadeOut_1s_forwards_5s\] {
-  animation: fadeOut 1s forwards 5s;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-\[bounce\2c fadeOut_1s_forwards_5s\] {
-  animation: bounce, fadeOut 1s forwards 5s;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-\[bounce_1s\2c fadeOut_1s_forwards_5s\] {
-  animation: bounce 1s, fadeOut 1s forwards 5s;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-\[bounce_1s_5\2c fadeOut_1s_forwards_5s\] {
-  animation: bounce 1s 5, fadeOut 1s forwards 5s;
 }
 
 @keyframes bounce {
@@ -766,12 +658,6 @@ video {
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
-}
-
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 @font-face {
