@@ -3,11 +3,25 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "JetBrains Mono";
-    src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2") format("woff2");
-    src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff") format("woff");
+  font-family: "JetBrains Mono";
+  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2")
+    format("woff2");
+  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff")
+    format("woff");
 }
 
 body {
-    font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.disappear {
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

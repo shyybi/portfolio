@@ -554,6 +554,40 @@ video {
   --tw-contain-style:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.bottom-12 {
+  bottom: 3rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-0\.5 {
+  left: 0.125rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-0\.5 {
+  right: 0.125rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.size-2\/12 {
+  width: 16.666667%;
+  height: 16.666667%;
+}
+
 .h-full {
   height: 100%;
 }
@@ -562,8 +596,124 @@ video {
   height: 100vh;
 }
 
-.snap-x {
-  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-\[fadeOut_1s_ease_in_forwards_5s\] {
+  animation: fadeOut 1s ease in forwards 5s;
+}
+
+.animate-\[bouncefadeOut_1s_ease_in_forwards_5s\] {
+  animation: bouncefadeOut 1s ease in forwards 5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce_1s_5\2c fadeOut_1s_ease_in_forwards_5s\] {
+  animation: bounce 1s 5, fadeOut 1s ease in forwards 5s;
+}
+
+.animate-\[fadeOut_1s\] {
+  animation: fadeOut 1s;
+}
+
+.animate-\[fadeOut_1s_forwards\] {
+  animation: fadeOut 1s forwards;
+}
+
+.animate-\[fadeOut_1s_forwards_5s\] {
+  animation: fadeOut 1s forwards 5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce\2c fadeOut_1s_forwards_5s\] {
+  animation: bounce, fadeOut 1s forwards 5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce_1s\2c fadeOut_1s_forwards_5s\] {
+  animation: bounce 1s, fadeOut 1s forwards 5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce_1s_5\2c fadeOut_1s_forwards_5s\] {
+  animation: bounce 1s 5, fadeOut 1s forwards 5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce_1s_5\.5\2c fadeOut_1s_forwards_5s\] {
+  animation: bounce 1s 5.5, fadeOut 1s forwards 5s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .snap-y {
@@ -572,14 +722,6 @@ video {
 
 .snap-mandatory {
   --tw-scroll-snap-strictness: mandatory;
-}
-
-.snap-start {
-  scroll-snap-align: start;
-}
-
-.snap-always {
-  scroll-snap-stop: always;
 }
 
 .content-center {
@@ -618,42 +760,54 @@ video {
   line-height: 1;
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 @font-face {
   font-family: "JetBrains Mono";
 
-  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2") format("woff2");
+  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2")
+    format("woff2");
 
-  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff") format("woff");
+  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff")
+    format("woff");
 }
 
 body {
   font-family: "JetBrains Mono", monospace;
 }
 
+.disappear {
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .\*\:h-screen > * {
   height: 100vh;
-}
-
-.\*\:h-dvh > * {
-  height: 100dvh;
-}
-
-.\*\:h-lvh > * {
-  height: 100lvh;
-}
-
-.\*\:h-svh > * {
-  height: 100svh;
 }
 
 .\*\:snap-start > * {
   scroll-snap-align: start;
 }
 
-.\*\:snap-normal > * {
-  scroll-snap-stop: normal;
-}
-
 .\*\:p-4 > * {
   padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:size-1\/12 {
+    width: 8.333333%;
+    height: 8.333333%;
+  }
 }
