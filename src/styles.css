@@ -14,6 +14,26 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+h2 {
+  @apply text-5xl lg:text-7xl;
+}
+
+h3 {
+  @apply text-3xl lg:text-5xl;
+}
+
+.proj-icon {
+  @apply size-52 rounded-xl;
+}
+
+.proj-button {
+  @apply mt-2 flex h-10 items-center justify-center gap-2 rounded-lg text-base transition-colors;
+}
+
+.proj-button img {
+  @apply h-4;
+}
+
 .handwave {
   animation: wave 2.5s infinite;
   transform-origin: 70% 70%;
