@@ -591,20 +591,8 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mb-52 {
-  margin-bottom: 13rem;
-}
-
 .flex {
   display: flex;
-}
-
-.grid {
-  display: grid;
 }
 
 .size-2\/12 {
@@ -620,51 +608,12 @@ video {
   height: 100vh;
 }
 
-.h-dvh {
-  height: 100dvh;
-}
-
-.h-auto {
-  height: auto;
-}
-
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-max {
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.max-h-full {
-  max-height: 100%;
-}
-
-.min-h-full {
-  min-height: 100%;
-}
-
-.min-h-max {
-  min-height: -moz-max-content;
-  min-height: max-content;
-}
-
 .w-full {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
-.w-dvw {
-  width: 100dvw;
-}
-
-.basis-full {
-  flex-basis: 100%;
+.flex-grow {
+  flex-grow: 1;
 }
 
 @keyframes bounce {
@@ -715,10 +664,6 @@ video {
   --tw-scroll-snap-strictness: mandatory;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -739,28 +684,12 @@ video {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.overflow-auto {
-  overflow: auto;
-}
-
-.overflow-clip {
-  overflow: clip;
-}
-
-.overflow-visible {
-  overflow: visible;
 }
 
 .overflow-scroll {
@@ -832,24 +761,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-0 {
-  padding: 0px;
-}
-
-.\!p-0 {
-  padding: 0px !important;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.\!py-10 {
-  padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
 }
 
 .text-center {
@@ -959,6 +870,18 @@ h3 {
   width: 1.25rem;
 }
 
+.slideshow {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.slideshow::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
 .handwave {
   animation: wave 2.5s infinite;
   transform-origin: 70% 70%;
@@ -1015,18 +938,6 @@ h3 {
   height: 100vh;
 }
 
-.\*\:h-full > * {
-  height: 100%;
-}
-
-.\*\:h-dvh > * {
-  height: 100dvh;
-}
-
-.\*\:w-dvw > * {
-  width: 100dvw;
-}
-
 .\*\:w-full > * {
   width: 100%;
 }
@@ -1061,10 +972,6 @@ h3 {
   .lg\:size-1\/12 {
     width: 8.333333%;
     height: 8.333333%;
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:text-8xl {

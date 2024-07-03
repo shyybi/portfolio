@@ -34,6 +34,15 @@ h3 {
   @apply w-5;
 }
 
+.slideshow {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slideshow::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .handwave {
   animation: wave 2.5s infinite;
   transform-origin: 70% 70%;
