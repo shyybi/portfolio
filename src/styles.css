@@ -31,7 +31,7 @@ h3 {
 }
 
 .proj-button img {
-  @apply h-4;
+  @apply w-5;
 }
 
 .handwave {
