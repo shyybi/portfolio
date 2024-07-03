@@ -25,13 +25,13 @@
         <meta name="twitter:image:alt" content="cat hitting keyboard intensively" />
     </head>
     <body>
-        <div class="slides h-screen snap-y snap-mandatory overflow-scroll *:h-screen *:snap-start *:p-4">
+        <div class="slides h-dvh snap-y snap-mandatory overflow-y-scroll *:h-dvh *:snap-start *:p-4">
             <div class="slide1 bg-gradient-to-bl from-orange-950 to-black text-gray-200">
                 <header class="h-full content-center">
                     <h1 class="mb-5 text-center text-5xl leading-snug lg:text-8xl">Hi, I'm&nbsp;<span class="animate-pulse text-orange-600">Feyli</span>.</h1>
                     <h4 class="mb-10 text-center text-gray-300 lg:mb-20">I'm a French CS student</h4>
                     <h2 class="pointer-events-none mb-10 select-none text-center">
-                        <span class="handwave">&#128075;</span>
+                        <span class="handwave noselect">&#128075;</span>
                     </h2>
                     <svg class="scrollsvg absolute bottom-12 left-0.5 right-0.5 mx-auto size-2/12 animate-[bounce_1s_5.5,fadeOut_1s_forwards_5s] cursor-pointer fill-gray-200 stroke-gray-200 stroke-1 lg:size-1/12" xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" xml:space="preserve">
                         <g>
@@ -44,14 +44,14 @@
             <div class="slide2 bg-gradient-to-br from-cyan-950 to-black text-gray-200">
                 <header class="flex h-full flex-col gap-10 p-1 lg:p-10">
                     <h3>My projects</h3>
-                    <div class="slideshow">
-                        <div class="flex flex-col gap-5 rounded-lg bg-gray-800 shadow-lg lg:flex-row">
-                            <img src="./medias/sunbot.png" alt="sunbot logo" class="proj-icon" />
-                            <div class="flex size-full flex-col justify-between gap-4">
-                                <div class="description">
+                    <div class="slideshow flex h-full w-full flex-grow snap-x snap-mandatory flex-row flex-nowrap gap-10 overflow-y-hidden overflow-x-scroll *:size-full *:min-h-full *:shrink-0 *:snap-start">
+                        <div class="project card flex flex-col gap-5 rounded-lg bg-gray-800 shadow-lg lg:flex-row">
+                            <div class="container">
+                                <header>
+                                    <img src="./medias/sunbot.png" alt="sunbot logo" class="proj-icon noselect" />
                                     <h3>Sun</h3>
-                                    <p>A multipurpose Discord bot anyone can use.</p>
-                                </div>
+                                </header>
+                                <p class="description">A multipurpose Discord bot anyone can use.</p>
                                 <div class="technologies">
                                     <h3 class="mb-4">Technologies</h3>
                                     <div class="text-6xl">
@@ -65,10 +65,10 @@
                                 </div>
                                 <div class="buttons flex max-h-40 flex-grow flex-col gap-2 justify-self-end *:flex-grow">
                                     <a href="https://discord.com/oauth2/authorize?client_id=743826135061889028" target="_blank">
-                                        <p class="proj-button bg-blurple-100 hover:bg-blurple-200"><img src="./medias/clyde-logo.png" alt="discord logo" />Add the bot </p>
+                                        <p class="proj-button bg-blurple-100 hover:bg-blurple-200"><img src="./medias/clyde-logo.png" alt="discord logo" />Add the Bot</p>
                                     </a>
                                     <a href="https://github.com/feyli/sun" target="_blank">
-                                        <p class="proj-button bg-gray-200 text-black hover:bg-gray-300"><img src="./medias/github-logo.png" alt="github logo" />Browse Code </p>
+                                        <p class="proj-button bg-gray-200 text-black hover:bg-gray-300"><img src="./medias/github-logo.png" alt="github logo" />Browse Code</p>
                                     </a>
                                 </div>
                             </div>
