@@ -591,6 +591,14 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -598,6 +606,11 @@ video {
 .size-2\/12 {
   width: 16.666667%;
   height: 16.666667%;
+}
+
+.size-full {
+  width: 100%;
+  height: 100%;
 }
 
 .h-full {
@@ -608,8 +621,8 @@ video {
   height: 100vh;
 }
 
-.w-full {
-  width: 100%;
+.max-h-40 {
+  max-height: 10rem;
 }
 
 .flex-grow {
@@ -652,10 +665,6 @@ video {
           user-select: none;
 }
 
-.snap-x {
-  scroll-snap-type: x var(--tw-scroll-snap-strictness);
-}
-
 .snap-y {
   scroll-snap-type: y var(--tw-scroll-snap-strictness);
 }
@@ -664,16 +673,8 @@ video {
   --tw-scroll-snap-strictness: mandatory;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
 }
 
 .content-center {
@@ -688,8 +689,20 @@ video {
   gap: 2.5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-5 {
   gap: 1.25rem;
+}
+
+.justify-self-end {
+  justify-self: end;
 }
 
 .overflow-scroll {
@@ -755,8 +768,8 @@ video {
   stroke-width: 1;
 }
 
-.p-10 {
-  padding: 2.5rem;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-4 {
@@ -772,6 +785,11 @@ video {
   line-height: 1;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .leading-snug {
   line-height: 1.375;
 }
@@ -781,24 +799,24 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-blurple-100 {
-  --tw-text-opacity: 1;
-  color: rgb(88 101 242 / var(--tw-text-opacity));
-}
-
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
-.text-green-500 {
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
 .text-orange-600 {
   --tw-text-opacity: 1;
   color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -810,11 +828,9 @@ video {
 @font-face {
   font-family: "JetBrains Mono";
 
-  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2")
-    format("woff2");
+  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2") format("woff2");
 
-  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff")
-    format("woff");
+  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff") format("woff");
 }
 
 body {
@@ -834,32 +850,79 @@ h2 {
 }
 
 h3 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 @media (min-width: 1024px) {
   h3 {
-    font-size: 3rem;
+    font-size: 3.75rem;
     line-height: 1;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.slideshow {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+  --tw-scroll-snap-strictness: mandatory;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+  overflow: scroll;
+}
+
+.slideshow > * {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .slideshow > * {
+    padding: 2.5rem;
   }
 }
 
 .proj-icon {
   width: 13rem;
   height: 13rem;
+  align-self: center;
   border-radius: 0.75rem;
 }
 
+@media (min-width: 1024px) {
+  .proj-icon {
+    align-self: auto;
+  }
+}
+
 .proj-button {
-  margin-top: 0.5rem;
   display: flex;
-  height: 2.5rem;
+  height: 100%;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -868,6 +931,11 @@ h3 {
 
 .proj-button img {
   width: 1.25rem;
+}
+
+.devicon-discordjs-plain::before {
+  --tw-text-opacity: 1;
+  color: rgb(88 101 242 / var(--tw-text-opacity));
 }
 
 .slideshow {
@@ -938,12 +1006,8 @@ h3 {
   height: 100vh;
 }
 
-.\*\:w-full > * {
-  width: 100%;
-}
-
-.\*\:shrink-0 > * {
-  flex-shrink: 0;
+.\*\:flex-grow > * {
+  flex-grow: 1;
 }
 
 .\*\:snap-start > * {
@@ -972,6 +1036,14 @@ h3 {
   .lg\:size-1\/12 {
     width: 8.333333%;
     height: 8.333333%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:p-10 {
+    padding: 2.5rem;
   }
 
   .lg\:text-8xl {
