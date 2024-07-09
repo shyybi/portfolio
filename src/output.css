@@ -934,22 +934,30 @@ h4 {
   gap: 2rem;
   overflow-y: auto;
   border-radius: 0.75rem;
-  background-color: rgb(255 255 255 / 0.05);
+  background-color: rgb(156 163 175 / 0.1);
   padding: 1rem;
   --tw-backdrop-blur: blur(24px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   .project .container {
     padding: 2.5rem;
   }
 }
 
 .project:nth-of-type(1) {
-  background: url("./medias/sunbot-nobg.png") no-repeat right top;
-  background-size: 35rem;
+  background: url("./medias/sunbot-nobg.png") no-repeat right;
+  background-size: 20rem;
+  background-position: right;
+}
+
+@media (min-width: 768px) {
+  .project:nth-of-type(1) {
+    background-size: 35rem;
+    background-position: right top;
+  }
 }
 
 .proj-icon {

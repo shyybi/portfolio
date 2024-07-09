@@ -42,12 +42,12 @@ h4 {
 }
 
 .project .container {
-    @apply rounded-xl flex size-full min-w-full flex-col justify-between gap-8 p-4 lg:p-10 backdrop-blur-xl bg-white/5 overflow-y-auto;
+    @apply flex size-full min-w-full flex-col justify-between gap-8 overflow-y-auto rounded-xl bg-gray-400/10 p-4 backdrop-blur-xl sm:p-10;
 }
 
 .project:nth-of-type(1) {
-    background: url("./medias/sunbot-nobg.png") no-repeat right top;
-    background-size: 35rem;
+    background: url("./medias/sunbot-nobg.png") no-repeat right;
+    @apply bg-[size:20rem] bg-right md:bg-[size:35rem] md:bg-right-top;
 }
 
 .proj-icon {
