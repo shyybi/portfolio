@@ -61,12 +61,14 @@ h4 {
 
 .proj-icon {
     @apply inline h-full rounded-xl border-[0.5px] border-gray-200;
-    box-shadow: 0 0 0.5px 0 rgb(229 231 235) inset, 0 0 0.5px 0 rgb(229 231 235);
+    box-shadow:
+        0 0 0.5px 0 rgb(229 231 235) inset,
+        0 0 0.5px 0 rgb(229 231 235);
 }
 
 .proj-button {
-    @apply flex h-full min-h-10 flex-row items-center justify-center gap-2 rounded-lg bg-gray-600 bg-opacity-30 text-xl leading-6 backdrop-blur-lg transition-colors border-[0.125px] border-gray-500;
-    @apply transition-all hover:bg-opacity-40;
+    @apply flex h-full min-h-10 flex-row items-center justify-center gap-2 rounded-lg border-[0.125px] border-gray-500 bg-gray-600 bg-opacity-25 text-xl leading-6 backdrop-blur-lg transition-colors;
+    @apply transition-all hover:bg-opacity-45;
 }
 
 .discord-button {
@@ -75,6 +77,10 @@ h4 {
 
 .ed-button {
     @apply bg-[#138DED] bg-opacity-25 hover:bg-opacity-35;
+}
+
+.raycast-button {
+    @apply bg-[#FF2362] bg-opacity-20 hover:bg-opacity-30;
 }
 
 .proj-button img {
@@ -92,7 +98,7 @@ h4 {
 
 .tech-icons a:hover::after {
     content: attr(aria-label);
-    @apply absolute -bottom-8 left-1/2 -translate-x-1/2 animate-[tooltip_0.1s] rounded-lg bg-gray-200 py-1 px-2 text-lg text-black text-nowrap;
+    @apply absolute -bottom-8 left-1/2 -translate-x-1/2 animate-[tooltip_0.1s] text-nowrap rounded-lg bg-gray-200 px-2 py-1 text-lg text-black;
 }
 
 .buttons {

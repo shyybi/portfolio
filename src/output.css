@@ -616,6 +616,16 @@ video {
   right: 0.125rem;
 }
 
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.-mx-2\.5 {
+  margin-left: -0.625rem;
+  margin-right: -0.625rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -644,6 +654,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.\!w-10 {
+  width: 2.5rem !important;
 }
 
 .w-full {
@@ -736,6 +750,10 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
 }
 
 .bg-gray-200\/10 {
@@ -961,7 +979,9 @@ h4 {
   border-width: 0.5px;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  box-shadow: 0 0 0.5px 0 rgb(229 231 235) inset, 0 0 0.5px 0 rgb(229 231 235);
+  box-shadow:
+        0 0 0.5px 0 rgb(229 231 235) inset,
+        0 0 0.5px 0 rgb(229 231 235);
 }
 
 .proj-button {
@@ -977,7 +997,7 @@ h4 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.3;
+  --tw-bg-opacity: 0.25;
   font-size: 1.25rem;
   line-height: 1.5rem;
   --tw-backdrop-blur: blur(16px);
@@ -990,7 +1010,7 @@ h4 {
 }
 
 .proj-button:hover {
-  --tw-bg-opacity: 0.4;
+  --tw-bg-opacity: 0.45;
 }
 
 .discord-button {
@@ -1005,6 +1025,15 @@ h4 {
 
 .ed-button:hover {
   --tw-bg-opacity: 0.35;
+}
+
+.raycast-button {
+  background-color: rgb(255 35 98 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+}
+
+.raycast-button:hover {
+  --tw-bg-opacity: 0.3;
 }
 
 .proj-button img {
@@ -1033,10 +1062,10 @@ h4 {
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
