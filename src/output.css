@@ -968,6 +968,54 @@ h4 {
   }
 }
 
+.project:nth-of-type(2) .container {
+  --tw-backdrop-saturate: saturate(0.8);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.project:nth-of-type(3) {
+  position: relative;
+}
+
+.project:nth-of-type(3) .container {
+  --tw-backdrop-blur: blur(12px);
+  --tw-backdrop-brightness: brightness(.75);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.raycast-background {
+  position: absolute;
+  right: 5rem;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.raycast-background img {
+  width: 12rem;
+}
+
+.raycast-cider {
+  --tw-rotate: 12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.raycast-lightshot {
+  margin-top: 5rem;
+  margin-left: 10rem;
+  --tw-rotate: -12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 640px) {
+  .raycast-lightshot {
+    margin-left: 20rem;
+  }
+}
+
 .technologies h3 {
   margin-bottom: 1rem;
 }
@@ -982,6 +1030,12 @@ h4 {
   box-shadow:
         0 0 0.5px 0 rgb(229 231 235) inset,
         0 0 0.5px 0 rgb(229 231 235);
+}
+
+@media (min-width: 768px) {
+  .project .description {
+    max-width: 50%;
+  }
 }
 
 .proj-button {
@@ -1010,12 +1064,16 @@ h4 {
 }
 
 .proj-button:hover {
-  --tw-bg-opacity: 0.45;
+  --tw-bg-opacity: 0.55;
 }
 
 .discord-button {
   background-color: rgb(65 77 239 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.3;
+}
+
+.discord-button:hover {
+  --tw-bg-opacity: 0.4;
 }
 
 .ed-button {

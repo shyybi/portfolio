@@ -55,6 +55,34 @@ h4 {
     @apply bg-[size:15rem] bg-[right_1rem_center] md:bg-[size:30rem] md:bg-[right_2rem_top_2rem];
 }
 
+.project:nth-of-type(2) .container {
+    @apply backdrop-saturate-[0.8];
+}
+
+.project:nth-of-type(3) {
+    @apply relative;
+}
+
+.project:nth-of-type(3) .container {
+    @apply backdrop-blur-md backdrop-brightness-75;
+}
+
+.raycast-background {
+    @apply absolute flex flex-col items-center right-20 bottom-12;
+}
+
+.raycast-background img {
+    @apply w-48;
+}
+
+.raycast-cider {
+    @apply rotate-12;
+}
+
+.raycast-lightshot {
+    @apply mt-20 ml-40 sm:ml-80 -rotate-12;
+}
+
 .technologies h3 {
     @apply mb-4;
 }
@@ -66,13 +94,17 @@ h4 {
         0 0 0.5px 0 rgb(229 231 235);
 }
 
+.project .description {
+    @apply md:max-w-[50%];
+}
+
 .proj-button {
     @apply flex h-full min-h-10 flex-row items-center justify-center gap-2 rounded-lg border-[0.125px] border-gray-500 bg-gray-600 bg-opacity-25 text-xl leading-6 backdrop-blur-lg transition-colors;
-    @apply transition-all hover:bg-opacity-45;
+    @apply transition-all hover:bg-opacity-55;
 }
 
 .discord-button {
-    @apply bg-blurple-200 bg-opacity-30;
+    @apply bg-blurple-200 bg-opacity-30 hover:bg-opacity-40;
 }
 
 .ed-button {
