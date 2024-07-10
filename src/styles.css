@@ -34,7 +34,7 @@ h4 {
 }
 
 .card {
-    @apply rounded-xl shadow-lg;
+    @apply rounded-2xl border-[0.5px] border-gray-500;
 }
 
 .project .container header {
@@ -42,7 +42,7 @@ h4 {
 }
 
 .project .container {
-    @apply flex size-full min-w-full flex-col justify-between gap-8 overflow-y-auto rounded-xl bg-gray-400/10 p-4 backdrop-blur-lg sm:p-10;
+    @apply flex size-full min-w-full flex-col justify-between gap-8 overflow-y-auto rounded-2xl bg-gray-400/10 p-4 backdrop-blur-lg sm:p-10;
 }
 
 .project:nth-of-type(1) {
@@ -50,16 +50,22 @@ h4 {
     @apply bg-[size:20rem] bg-right md:bg-[size:35rem] md:bg-right-top;
 }
 
+.project:nth-of-type(2) {
+    background: url("./medias/me-logo.png") no-repeat right;
+    @apply bg-[size:15rem] bg-[right_1rem_center] md:bg-[size:30rem] md:bg-[right_2rem_top_2rem];
+}
+
 .technologies h3 {
     @apply mb-4;
 }
 
 .proj-icon {
-    @apply inline h-full rounded-xl border border-gray-200;
+    @apply inline h-full rounded-xl border-[0.5px] border-gray-200;
+    box-shadow: 0 0 0.5px 0 rgb(229 231 235) inset, 0 0 0.5px 0 rgb(229 231 235);
 }
 
 .proj-button {
-    @apply flex h-full min-h-10 flex-row items-center justify-center gap-2 rounded-lg bg-gray-600 bg-opacity-30 text-xl leading-6 backdrop-blur-lg transition-colors;
+    @apply flex h-full min-h-10 flex-row items-center justify-center gap-2 rounded-lg bg-gray-600 bg-opacity-30 text-xl leading-6 backdrop-blur-lg transition-colors border-[0.125px] border-gray-500;
     @apply transition-all hover:bg-opacity-40;
 }
 
@@ -73,6 +79,20 @@ h4 {
 
 .proj-button img {
     @apply w-5;
+}
+
+.tech-icons {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.tech-icons a {
+    @apply relative;
+}
+
+.tech-icons a:hover::after {
+    content: attr(aria-label);
+    @apply absolute -bottom-8 left-1/2 -translate-x-1/2 animate-[tooltip_0.1s] rounded-lg bg-gray-200 py-1 px-2 text-lg text-black text-nowrap;
 }
 
 .buttons {
@@ -131,5 +151,14 @@ h4 {
     /* Reset for the last half to pause */
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes tooltip {
+    0% {
+        @apply opacity-50;
+    }
+    100% {
+        @apply opacity-100;
     }
 }
