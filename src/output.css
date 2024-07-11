@@ -823,6 +823,10 @@ video {
   line-height: 1;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-snug {
   line-height: 1.375;
 }
@@ -837,17 +841,39 @@ video {
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .text-orange-600 {
   --tw-text-opacity: 1;
   color: rgb(234 88 12 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 @font-face {
   font-family: "JetBrains Mono";
 
-  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff2") format("woff2");
+  font-style: normal;
 
-  src: url("../jbmono/jetbrainsmono-variablefont_wght-webfont.woff") format("woff");
+  font-weight: 100 900;
+
+  src: url("../jbmono/JetBrainsMono[wght].woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+
+  font-style: italic;
+
+  font-weight: 100 900;
+
+  src: url("../jbmono/JetBrainsMono-Italic[wght].woff2") format("woff2");
 }
 
 * {
@@ -995,6 +1021,19 @@ h4 {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.project:nth-of-type(4) {
+  background: url("./medias/arcane-logo.png") no-repeat right;
+  background-size: 15rem;
+  background-position: right 1rem center;
+}
+
+@media (min-width: 768px) {
+  .project:nth-of-type(4) {
+    background-size: 25rem;
+    background-position: right 3rem top 3rem;
+  }
+}
+
 .raycast-background {
   position: absolute;
   bottom: 3rem;
@@ -1065,7 +1104,7 @@ h4 {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  border-width: 0.125px;
+  border-width: 0.25px;
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -1083,6 +1122,13 @@ h4 {
 
 .proj-button:hover {
   --tw-bg-opacity: 0.55;
+}
+
+.proj-button {
+  box-shadow:
+        0 0 0.25px 0 rgb(107 114 128) inset,
+        0 0 0.25px 0 rgb(107 114 128);
+  -webkit-backdrop-filter: none !important;
 }
 
 .discord-button {
@@ -1110,6 +1156,15 @@ h4 {
 
 .raycast-button:hover {
   --tw-bg-opacity: 0.3;
+}
+
+.arcane-button {
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.4;
+}
+
+.arcane-button:hover {
+  --tw-bg-opacity: 0.5;
 }
 
 .proj-button img {
@@ -1171,6 +1226,10 @@ h4 {
   animation: wave 2.5s infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+}
+
+.social-inline {
+  font-weight: 800;
 }
 
 .noselect {
