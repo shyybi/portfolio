@@ -808,6 +808,11 @@ video {
   text-align: center;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -897,6 +902,11 @@ h4 {
   }
 }
 
+.slide2 > header > h3::after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+}
+
 .card {
   border-radius: 1rem;
   border-width: 0.5px;
@@ -929,7 +939,7 @@ h4 {
   gap: 2rem;
   overflow-y: auto;
   border-radius: 1rem;
-  background-color: rgb(156 163 175 / 0.1);
+  background-color: rgb(75 85 99 / 0.2);
   padding: 1rem;
   --tw-backdrop-blur: blur(16px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -987,8 +997,8 @@ h4 {
 
 .raycast-background {
   position: absolute;
-  right: 5rem;
   bottom: 3rem;
+  right: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1004,8 +1014,8 @@ h4 {
 }
 
 .raycast-lightshot {
-  margin-top: 5rem;
   margin-left: 10rem;
+  margin-top: 5rem;
   --tw-rotate: -12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1025,6 +1035,14 @@ h4 {
   height: 100%;
   border-radius: 0.75rem;
   border-width: 0.5px;
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  box-shadow:
+        0 0 0.5px 0 rgb(107 114 128) inset,
+        0 0 0.5px 0 rgb(107 114 128);
+}
+
+.project:nth-of-type(1) > .container > header > .proj-icon {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
   box-shadow:
@@ -1218,6 +1236,17 @@ h4 {
   }
 }
 
+@keyframes blink {
+  0%,
+    100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 .\*\:size-full > * {
   width: 100%;
   height: 100%;
@@ -1241,6 +1270,13 @@ h4 {
 
 .\*\:p-4 > * {
   padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1024px) {

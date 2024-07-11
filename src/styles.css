@@ -33,6 +33,11 @@ h4 {
     @apply text-xl lg:text-3xl;
 }
 
+.slide2 > header > h3::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
 .card {
     @apply rounded-2xl border-[0.5px] border-gray-500;
 }
@@ -42,7 +47,7 @@ h4 {
 }
 
 .project .container {
-    @apply flex size-full min-w-full flex-col justify-between gap-8 overflow-y-auto rounded-2xl bg-gray-400/10 p-4 backdrop-blur-lg sm:p-10;
+    @apply flex size-full min-w-full flex-col justify-between gap-8 overflow-y-auto rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
 }
 
 .project:nth-of-type(1) {
@@ -68,7 +73,7 @@ h4 {
 }
 
 .raycast-background {
-    @apply absolute flex flex-col items-center right-20 bottom-12;
+    @apply absolute bottom-12 right-20 flex flex-col items-center;
 }
 
 .raycast-background img {
@@ -80,7 +85,7 @@ h4 {
 }
 
 .raycast-lightshot {
-    @apply mt-20 ml-40 sm:ml-80 -rotate-12;
+    @apply ml-40 mt-20 -rotate-12 sm:ml-80;
 }
 
 .technologies h3 {
@@ -88,7 +93,14 @@ h4 {
 }
 
 .proj-icon {
-    @apply inline h-full rounded-xl border-[0.5px] border-gray-200;
+    @apply inline h-full rounded-xl border-[0.5px] border-gray-500;
+    box-shadow:
+        0 0 0.5px 0 rgb(107 114 128) inset,
+        0 0 0.5px 0 rgb(107 114 128);
+}
+
+.project:nth-of-type(1) > .container > header > .proj-icon {
+    @apply border-gray-200;
     box-shadow:
         0 0 0.5px 0 rgb(229 231 235) inset,
         0 0 0.5px 0 rgb(229 231 235);
@@ -198,5 +210,15 @@ h4 {
     }
     100% {
         @apply opacity-100;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
     }
 }
