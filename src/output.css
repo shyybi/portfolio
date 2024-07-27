@@ -847,6 +847,10 @@ video {
   line-height: 1.75rem;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .italic {
   font-style: italic;
 }
