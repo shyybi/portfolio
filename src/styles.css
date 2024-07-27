@@ -27,6 +27,7 @@
 
 body {
     font-family: "JetBrains Mono", monospace;
+    @apply text-gray-200;
 }
 
 h2 {
@@ -41,13 +42,21 @@ h4 {
     @apply text-xl lg:text-3xl;
 }
 
-.slide2 > header > h3::after {
+.project-slide > header > h3::after {
     content: "_";
     animation: blink 1s step-end infinite;
 }
 
+.container {
+    @apply size-full min-w-full;
+}
+
 .card {
     @apply rounded-2xl border-[0.5px] border-gray-500;
+}
+
+.card .container {
+    @apply flex flex-col gap-4 rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
 }
 
 .project .container header {
@@ -55,7 +64,7 @@ h4 {
 }
 
 .project .container {
-    @apply flex size-full min-w-full flex-col justify-between gap-8 overflow-y-auto rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
+    @apply flex flex-col justify-between gap-8 overflow-y-auto rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
 }
 
 .project:nth-of-type(1) {
@@ -193,6 +202,10 @@ h4 {
     user-select: none;
     -webkit-user-select: none;
     pointer-events: none;
+}
+
+.france-anim {
+    @apply *:transition-colors hover:animate-pulse;
 }
 
 @media (max-height: 600px) {
