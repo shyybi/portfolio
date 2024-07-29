@@ -744,10 +744,6 @@ video {
   scroll-behavior: smooth;
 }
 
-.text-nowrap {
-  text-wrap: nowrap;
-}
-
 .bg-black\/70 {
   background-color: rgb(0 0 0 / 0.7);
 }
@@ -776,14 +772,48 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-gray-950 {
+  --tw-gradient-from: #030712 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(3 7 18 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-orange-950 {
   --tw-gradient-from: #431407 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(67 20 7 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-pink-950 {
+  --tw-gradient-from: #500724 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(80 7 36 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-purple-950 {
+  --tw-gradient-from: #3b0764 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 7 100 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-black {
   --tw-gradient-to: #000 var(--tw-gradient-to-position);
+}
+
+.to-gray-700 {
+  --tw-gradient-to: #374151 var(--tw-gradient-to-position);
+}
+
+.to-orange-700 {
+  --tw-gradient-to: #c2410c var(--tw-gradient-to-position);
+}
+
+.to-pink-700 {
+  --tw-gradient-to: #be185d var(--tw-gradient-to-position);
+}
+
+.to-purple-700 {
+  --tw-gradient-to: #7e22ce var(--tw-gradient-to-position);
 }
 
 .fill-gray-200 {
@@ -1001,13 +1031,14 @@ h4 {
 
 @media (min-width: 640px) {
   .passion .container {
+    min-width: 16rem;
     padding: 2rem;
   }
 }
 
 .passion header {
   display: flex;
-  height: 2rem;
+  height: 2.5rem;
   width: 100%;
   flex-direction: row;
   align-items: center;
@@ -1016,12 +1047,22 @@ h4 {
 
 @media (min-width: 640px) {
   .passion header {
-    height: 4rem;
+    height: 3.5rem;
   }
 }
 
 .passion img {
   max-height: 100%;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  padding: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .passion img {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+  }
 }
 
 .passion h4 {
@@ -1387,6 +1428,13 @@ h4 {
 
 .hintmove {
   animation: hintMove 1s ease-in-out;
+}
+
+.horizontal-scroll {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: move;
 }
 
 @media (max-height: 600px) {

@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 /.idea/.gitignore
 /.idea/discord.xml
 /.idea/feyli.github.io.iml
@@ -15,3 +16,4 @@ tailwindcss.xml
 /src/styles.css
 /.idea/prettier.xml
 /.idea/codeStyles/Project.xml
+/src/svg/.idea/discord.xml
