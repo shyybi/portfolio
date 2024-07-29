@@ -30,27 +30,6 @@ body {
     @apply text-gray-200;
 }
 
-h2 {
-    @apply text-5xl lg:text-7xl;
-}
-
-h3 {
-    @apply text-2xl lg:text-5xl font-semibold;
-}
-
-h4 {
-    @apply text-xl lg:text-3xl mb-4 font-bold;
-}
-
-.passion h4 {
-    @apply font-medium tracking-wider;
-}
-
-.project-slide > header > h3::after {
-    content: "_";
-    animation: blink 1s step-end infinite;
-}
-
 .container {
     @apply size-full min-w-full;
 }
@@ -61,6 +40,51 @@ h4 {
 
 .card .container {
     @apply flex flex-col gap-4 rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
+}
+
+.slideshow {
+    @apply flex w-full flex-grow flex-row gap-10 overflow-y-hidden overflow-x-scroll;
+}
+
+h2 {
+    @apply text-5xl lg:text-7xl;
+}
+
+h3 {
+    @apply text-2xl font-semibold lg:text-5xl;
+}
+
+h4 {
+    @apply mb-4 text-xl font-bold lg:text-3xl;
+}
+
+.passions .slideshow {
+    @apply gap-5 sm:gap-10;
+}
+
+.passion .container {
+    @apply sm:p-8 min-w-52;
+}
+
+.passion header {
+    @apply flex h-8 sm:h-16 w-full flex-row items-center gap-4;
+}
+
+.passion img {
+    @apply max-h-full;
+}
+
+.passion h4 {
+    @apply mb-0 font-medium tracking-wider;
+}
+
+.passion p {
+    @apply text-xs sm:text-base;
+}
+
+.project-slide > header > h3::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
 }
 
 .project .container header {
@@ -284,7 +308,13 @@ h4 {
 }
 
 @keyframes hintMove {
-    0% { transform: translateX(0); }
-    75% { transform: translateX(-20%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
