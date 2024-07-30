@@ -1,2 +1,2 @@
 # feyli.github.io
-Home for all my projects
+Home of all my projects
