@@ -25,7 +25,8 @@
     display: none; /* Safari and Chrome */
 }
 
-html, body {
+html,
+body {
     font-family: "JetBrains Mono", monospace;
     scroll-behavior: smooth;
     @apply text-gray-200;
@@ -37,6 +38,10 @@ html, body {
 
 .card {
     @apply rounded-2xl border-[0.5px] border-gray-500;
+}
+
+.page {
+    @apply p-8 sm:p-10 lg:p-16;
 }
 
 .card .container {
@@ -64,15 +69,15 @@ h4 {
 }
 
 .passion .container {
-    @apply sm:p-8 min-w-52 sm:min-w-64;
+    @apply min-w-52 sm:min-w-64 sm:p-8;
 }
 
 .passion header {
-    @apply flex h-10 sm:h-14 w-full flex-row items-center gap-4;
+    @apply flex h-10 w-full flex-row items-center gap-4 sm:h-14;
 }
 
 .passion img {
-    @apply max-h-full p-2 rounded-lg sm:p-3 sm:rounded-xl bg-gradient-to-br pointer-events-none;
+    @apply pointer-events-none max-h-full rounded-lg bg-gradient-to-br p-2 sm:rounded-xl sm:p-3;
 }
 
 .passion h4 {
@@ -83,7 +88,15 @@ h4 {
     @apply text-xs sm:text-base;
 }
 
-.project-slide > header > h3::after {
+.social-container {
+    @apply flex items-center justify-center rounded-xl lg:rounded-full bg-gradient-to-br p-[1px] sm:p-[1.5px];
+}
+
+.socials a {
+    @apply flex h-full w-full p-2 px-4 text-xs sm:text-base items-center justify-center rounded-xl lg:rounded-full bg-gray-900 hover:bg-gray-950;
+}
+
+.project-page > header > h3::after {
     content: "_";
     animation: blink 1s step-end infinite;
 }
@@ -158,7 +171,7 @@ h4 {
 }
 
 .project .description {
-    @apply md:max-w-[50%] text-justify;
+    @apply text-justify md:max-w-[50%];
 }
 
 .proj-button {
@@ -191,6 +204,7 @@ h4 {
 }
 
 .tech-icons {
+    @apply text-5xl sm:text-6xl;
     user-select: none;
     -webkit-user-select: none;
 }

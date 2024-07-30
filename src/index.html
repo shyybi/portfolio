@@ -25,8 +25,8 @@
         <meta name="twitter:image:alt" content="cat hitting keyboard intensively" />
     </head>
     <body>
-        <div class="slides h-dvh snap-y snap-mandatory overflow-y-scroll *:h-dvh *:snap-start *:p-4">
-            <div class="intro-slide bg-gradient-to-bl from-orange-950 to-black text-gray-200">
+        <div class="slides h-dvh snap-y snap-mandatory overflow-y-scroll *:h-dvh *:snap-start">
+            <div class="page bg-gradient-to-bl from-orange-950 to-black text-gray-200">
                 <header class="h-full content-center">
                     <h1 class="mb-5 text-center text-5xl leading-snug lg:text-8xl">Hi, I'm&nbsp;<span class="animate-pulse text-orange-600">Feyli</span>.</h1>
                     <h4 class="mb-10 text-center font-normal text-gray-300 lg:mb-20"
@@ -45,13 +45,13 @@
                     </a>
                 </header>
             </div>
-            <div id="about" class="about-page bg-gradient-to-br from-fuchsia-950 to-black">
-                <header class="flex h-full flex-col gap-10 p-1 lg:p-10">
+            <div id="about" class="page bg-gradient-to-br from-fuchsia-950 to-black">
+                <header class="flex h-full justify-around flex-col gap-5">
                     <h3 class="text-3xl sm:text-5xl">About me</h3>
-                    <div class="text-lg sm:text-xl">
+                    <div class="text-sm sm:text-xl shrink">
                         <p>I'm 16 years old, meaning I can drive in the USA and have a beer in Germany.</p>
                     </div>
-                    <div class="passions">
+                    <div class="passions grow">
                         <h4>Interests</h4>
                         <div class="slideshow horizontal-scroll flex flex-row gap-5">
                             <div class="card passion">
@@ -92,13 +92,48 @@
                             </div>
                         </div>
                     </div>
-                    <div class="socials">
+                    <div class="socials grow">
                         <h4>Socials</h4>
+                        <div class="list-container flex flex-row flex-wrap gap-2">
+                            <div class="social-container from-gray-300 to-gray-500">
+                                <a href="https://github.com/feyli" target="_blank">GitHub</a>
+                            </div>
+                            <div class="social-container from-blurple-100 to-blurple-400">
+                                <a href="https://discord.com/users/738852700816670822" target="_blank">Discord</a>
+                            </div>
+                            <div class="social-container from-orange-500 to-orange-900">
+                                <a href="https://www.reddit.com/u/aNiceFox" target="_blank">Reddit</a>
+                            </div>
+                            <div class="social-container from-gray-400 to-gray-600">
+                                <a href="https://twitter.com/feylidev" target="_blank">X (Twitter)</a>
+                            </div>
+                            <div class="social-container from-purple-500 to-purple-900">
+                                <a href="https://www.twitch.tv/feylidev" target="_blank">Twitch</a>
+                            </div>
+                            <div class="social-container from-blue-500 to-blue-900">
+                                <a href="https://steamcommunity.com/id/feyli" target="_blank">Steam</a>
+                            </div>
+                            <div class="social-container from-pink-500 to-pink-900">
+                                <a href="https://music.apple.com/profile/feyli" target="_blank">Apple Music</a>
+                            </div>
+                            <div class="social-container from-red-700 to-red-950">
+                                <a href="https://www.youtube.com/Feyli" target="_blank">YouTube</a>
+                            </div>
+                            <div class="social-container from-purple-500 via-red-700 to-yellow-700">
+                                <a href="https://www.instagram.com/feylidev" target="_blank">Instagram</a>
+                            </div>
+                            <div class="social-container from-white to-black">
+                                <a href="https://www.threads.net/feylidev" target="_blank">Threads</a>
+                            </div>
+                            <div class="social-container from-red-700 to-red-950">
+                                <a href="https://tracker.gg/valorant/profile/riot/Feyli%23FMBOY" target="_blank">TRN</a>
+                            </div>
+                        </div>
                     </div>
                 </header>
             </div>
-            <div class="project-slide bg-gradient-to-br from-cyan-950 to-black">
-                <header class="flex h-full flex-col gap-10 p-1 lg:p-10">
+            <div class="project-page page bg-gradient-to-br from-cyan-950 to-black">
+                <header class="flex h-full flex-col gap-5 sm:gap-8 lg:gap-10">
                     <h3 class="text-3xl sm:text-5xl">My projects</h3>
                     <div class="slideshow h-full snap-x snap-mandatory flex-nowrap *:size-full *:min-h-full *:shrink-0 *:snap-start">
                         <div class="project card">
@@ -110,7 +145,7 @@
                                 <p class="description">A multipurpose Discord bot anyone can use for free.</p>
                                 <div class="technologies">
                                     <h3>Technologies</h3>
-                                    <div class="tech-icons text-6xl">
+                                    <div class="tech-icons">
                                         <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
                                         <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
                                         <a href="https://discord.js.org" target="_blank" aria-label="discord.js"><i class="devicon-discordjs-plain colored"></i></a>
@@ -138,7 +173,7 @@
                                 <p class="description">A website that calculates your average grades on EcoleDirecte per pre-set timespan.</p>
                                 <div class="technologies">
                                     <h3>Technologies</h3>
-                                    <div class="tech-icons text-6xl">
+                                    <div class="tech-icons">
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" aria-label="HTML5"><i class="devicon-html5-plain-wordmark colored"></i></a>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" aria-label="CSS3"><i class="devicon-css3-plain-wordmark colored"></i></a>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
@@ -169,7 +204,7 @@
                                 <p class="description">I have contributed to the Raycast Store by creating 2&nbsp;extensions and contributing to an existing one.</p>
                                 <div class="technologies">
                                     <h3>Technologies</h3>
-                                    <div class="tech-icons text-6xl">
+                                    <div class="tech-icons">
                                         <a href="https://reactjs.org" target="_blank" aria-label="React"><i class="devicon-react-original colored"></i></a>
                                         <a href="https://www.typescriptlang.org" target="_blank" aria-label="TypeScript"><i class="devicon-typescript-plain colored"></i></a>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
@@ -197,7 +232,7 @@
                                 <p class="description">Arcane Blades is a Minecraft server created by <a href="https://www.youtube.com/@AdLanderHQ" class="social-inline text-red-500" aria-label="&#9099; Open YouTube">@platiniumstar</a>. I'm responsible for the website, the Minecraft plugins, the API and the various Discord systems.</p>
                                 <div class="technologies">
                                     <h3>Technologies</h3>
-                                    <div class="tech-icons text-6xl">
+                                    <div class="tech-icons">
                                         <a href="https://pages.github.com" target="_blank" aria-label="GitHub Pages"><i class="devicon-githubactions-plain colored"></i></a>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" aria-label="HTML5"><i class="devicon-html5-plain-wordmark colored"></i></a>
                                         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" aria-label="CSS3"><i class="devicon-css3-plain-wordmark colored"></i></a>
