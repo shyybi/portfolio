@@ -919,6 +919,10 @@ video {
   --tw-gradient-to: #a16207 var(--tw-gradient-to-position);
 }
 
+.to-gray-400 {
+  --tw-gradient-to: #9ca3af var(--tw-gradient-to-position);
+}
+
 .fill-gray-200 {
   fill: #e5e7eb;
 }
@@ -1238,6 +1242,9 @@ h4 {
   padding-right: 1rem;
   font-size: 0.75rem;
   line-height: 1rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .socials a:hover {
