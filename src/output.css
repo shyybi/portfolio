@@ -919,10 +919,6 @@ video {
   --tw-gradient-to: #a16207 var(--tw-gradient-to-position);
 }
 
-.to-gray-400 {
-  --tw-gradient-to: #9ca3af var(--tw-gradient-to-position);
-}
-
 .fill-gray-200 {
   fill: #e5e7eb;
 }
@@ -1002,7 +998,7 @@ video {
 
   font-weight: 100 900;
 
-  src: url("../jbmono/JetBrainsMono[wght].woff2") format("woff2");
+  src: url("jbmono/JetBrainsMono[wght].woff2") format("woff2");
 }
 
 @font-face {
@@ -1012,7 +1008,7 @@ video {
 
   font-weight: 100 900;
 
-  src: url("../jbmono/JetBrainsMono-Italic[wght].woff2") format("woff2");
+  src: url("jbmono/JetBrainsMono-Italic[wght].woff2") format("woff2");
 }
 
 * {
