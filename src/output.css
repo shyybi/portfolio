@@ -620,10 +620,6 @@ video {
   right: 0.125rem;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .-mx-2 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -637,11 +633,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .mb-10 {
@@ -747,10 +738,6 @@ video {
 
 .justify-around {
   justify-content: space-around;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -962,16 +949,6 @@ video {
   line-height: 1;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1068,6 +1045,7 @@ body {
 }
 
 .page {
+  overflow-y: scroll;
   padding: 2rem;
 }
 
@@ -1095,7 +1073,7 @@ body {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .card .container {
     padding: 2.5rem;
   }
@@ -1263,14 +1241,16 @@ h4 {
 
 @media (min-width: 640px) {
   .socials a {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .socials a {
     border-radius: 9999px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1280,7 +1260,6 @@ h4 {
 }
 
 .project .container header {
-  z-index: 10;
   display: flex;
   height: 3.5rem;
   flex-direction: row;
@@ -1298,7 +1277,6 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
   overflow-y: auto;
   border-radius: 1rem;
   background-color: rgb(75 85 99 / 0.2);
@@ -1308,9 +1286,21 @@ h4 {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .project .container {
     padding: 2.5rem;
+  }
+}
+
+.project h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .project h3 {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
@@ -1428,6 +1418,15 @@ h4 {
 
 .project .description {
   text-align: justify;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 640px) {
+  .project .description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1517,7 +1516,7 @@ h4 {
   line-height: 1;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .tech-icons {
     font-size: 3.75rem;
     line-height: 1;
@@ -1786,10 +1785,6 @@ h4 {
 
   .sm\:gap-8 {
     gap: 2rem;
-  }
-
-  .sm\:gap-10 {
-    gap: 2.5rem;
   }
 
   .sm\:text-5xl {

@@ -41,11 +41,11 @@ body {
 }
 
 .page {
-    @apply p-8 sm:p-10 lg:p-16;
+    @apply p-8 sm:p-10 lg:p-16 overflow-y-scroll;
 }
 
 .card .container {
-    @apply flex flex-col gap-4 rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
+    @apply flex flex-col rounded-2xl bg-gray-600/20 p-4 gap-4 backdrop-blur-lg lg:p-10;
 }
 
 .slideshow {
@@ -93,7 +93,7 @@ h4 {
 }
 
 .socials a {
-    @apply flex h-full w-full p-2 px-4 text-xs sm:text-base items-center justify-center rounded-xl lg:rounded-full bg-gray-900 hover:bg-gray-950;
+    @apply flex h-full w-full p-2 px-4 text-xs sm:text-sm lg:text-base items-center justify-center rounded-xl lg:rounded-full bg-gray-900 hover:bg-gray-950;
 }
 
 .project-page > header > h3::after {
@@ -102,11 +102,15 @@ h4 {
 }
 
 .project .container header {
-    @apply z-10 flex h-14 flex-row items-center gap-4 lg:h-20;
+    @apply flex h-14 flex-row items-center gap-4 lg:h-20;
 }
 
 .project .container {
-    @apply flex flex-col justify-between gap-8 overflow-y-auto rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg sm:p-10;
+    @apply flex flex-col justify-between overflow-y-auto rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg lg:p-10;
+}
+
+.project h3 {
+    @apply text-xl lg:text-5xl;
 }
 
 .project:nth-of-type(1) {
@@ -171,7 +175,7 @@ h4 {
 }
 
 .project .description {
-    @apply text-justify md:max-w-[50%];
+    @apply text-justify text-xs sm:text-base md:max-w-[50%];
 }
 
 .proj-button {
@@ -204,7 +208,7 @@ h4 {
 }
 
 .tech-icons {
-    @apply text-5xl sm:text-6xl;
+    @apply text-5xl lg:text-6xl;
     user-select: none;
     -webkit-user-select: none;
 }
