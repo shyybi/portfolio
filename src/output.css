@@ -1057,6 +1057,12 @@ body {
 
 @media (min-width: 1024px) {
   .page {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
     padding: 4rem;
   }
 }
@@ -1299,8 +1305,15 @@ h4 {
 
 @media (min-width: 1024px) {
   .project h3 {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project h3 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

@@ -41,7 +41,7 @@ body {
 }
 
 .page {
-    @apply p-8 sm:p-10 lg:p-16 overflow-y-scroll;
+    @apply p-8 sm:p-10 lg:p-12 xl:p-16 overflow-y-scroll;
 }
 
 .card .container {
@@ -110,7 +110,7 @@ h4 {
 }
 
 .project h3 {
-    @apply text-xl lg:text-5xl;
+    @apply text-xl lg:text-2xl xl:text-4xl;
 }
 
 .project:nth-of-type(1) {
