@@ -6,14 +6,14 @@
     font-family: "JetBrains Mono";
     font-style: normal;
     font-weight: 100 900;
-    src: url("../jbmono/JetBrainsMono[wght].woff2") format("woff2");
+    src: url("jbmono/JetBrainsMono[wght].woff2") format("woff2");
 }
 
 @font-face {
     font-family: "JetBrains Mono";
     font-style: italic;
     font-weight: 100 900;
-    src: url("../jbmono/JetBrainsMono-Italic[wght].woff2") format("woff2");
+    src: url("jbmono/JetBrainsMono-Italic[wght].woff2") format("woff2");
 }
 
 * {
