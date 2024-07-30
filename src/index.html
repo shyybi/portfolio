@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
     <head>
         <!-- Dependencies -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -35,15 +35,17 @@
                     <h2 class="pointer-events-none mb-10 select-none text-center">
                         <span class="handwave noselect">&#128075;</span>
                     </h2>
-                    <svg class="scrollsvg absolute bottom-12 left-0.5 right-0.5 mx-auto size-2/12 animate-[bounce_1s_5.5,fadeOut_1s_forwards_5s] cursor-pointer fill-gray-200 stroke-gray-200 stroke-1 lg:size-1/12" xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" xml:space="preserve">
-                        <g>
-                            <path d="M25 45a14 14 0 0 0 14-14V19a14 14 0 0 0-28 0v12a14 14 0 0 0 14 14zM13 19a12 12 0 0 1 24 0v12a12 12 0 0 1-24 0z" opacity="1" />
-                            <path d="M24 24.5h.09l.2.21a1 1 0 0 0 1.42 0l.2-.21H26v-.09l5.71-5.7-1.42-1.42-4.29 4.3V11h-2v10.59l-4.29-4.3-1.42 1.42 5.71 5.7z" opacity="1" />
-                        </g>
-                    </svg>
+                    <a href="#about">
+                        <svg class="scrollsvg absolute bottom-12 left-0.5 right-0.5 mx-auto size-2/12 animate-[bounce_1s_5.5,fadeOut_1s_forwards_5s] fill-gray-200 stroke-gray-200 stroke-1 sm:size-1/12" xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" xml:space="preserve">
+                            <g>
+                                <path d="M25 45a14 14 0 0 0 14-14V19a14 14 0 0 0-28 0v12a14 14 0 0 0 14 14zM13 19a12 12 0 0 1 24 0v12a12 12 0 0 1-24 0z" opacity="1" />
+                                <path d="M24 24.5h.09l.2.21a1 1 0 0 0 1.42 0l.2-.21H26v-.09l5.71-5.7-1.42-1.42-4.29 4.3V11h-2v10.59l-4.29-4.3-1.42 1.42 5.71 5.7z" opacity="1" />
+                            </g>
+                        </svg>
+                    </a>
                 </header>
             </div>
-            <div class="about-page bg-gradient-to-br from-fuchsia-950 to-black">
+            <div id="about" class="about-page bg-gradient-to-br from-fuchsia-950 to-black">
                 <header class="flex h-full flex-col gap-10 p-1 lg:p-10">
                     <h3 class="text-3xl sm:text-5xl">About me</h3>
                     <div class="text-lg sm:text-xl">
@@ -55,7 +57,7 @@
                             <div class="card passion">
                                 <div class="container">
                                     <header>
-                                        <img src="./svg/code.svg" alt="code icon" class="from-orange-950 to-orange-700">
+                                        <img src="./svg/code.svg" alt="code icon" class="from-orange-950 to-orange-700" />
                                         <h4>Code</h4>
                                     </header>
                                     <p>I just really like being able to create any useful thing that goes through my head.</p>
@@ -64,7 +66,7 @@
                             <div class="card passion">
                                 <div class="container">
                                     <header>
-                                        <img src="./svg/music.svg" alt="music icon" class="from-pink-950 to-pink-700">
+                                        <img src="./svg/music.svg" alt="music icon" class="from-pink-950 to-pink-700" />
                                         <h4>Music</h4>
                                     </header>
                                     <p>Pianist, former organist and learning guitar. I generally like sounds. I listen to music A LOT.</p>
@@ -73,16 +75,16 @@
                             <div class="card passion">
                                 <div class="container">
                                     <header>
-                                        <img src="./svg/gaming.svg" alt="gamepad icon" class="from-purple-950 to-purple-700">
+                                        <img src="./svg/gaming.svg" alt="gamepad icon" class="from-purple-950 to-purple-700" />
                                         <h4>Video Games</h4>
                                     </header>
                                     <p>I've mostly played FPSs in my life but I'm looking forward to playing more story games.</p>
                                 </div>
                             </div>
-                            <div class="card passion">
+                            <div class="card passion sm:min-w-72">
                                 <div class="container">
                                     <header>
-                                        <img src="./svg/creation.svg" alt="video editing icon" class="from-gray-950 to-gray-700">
+                                        <img src="./svg/creation.svg" alt="video editing icon" class="from-gray-950 to-gray-700" />
                                         <h4>Creation</h4>
                                     </header>
                                     <p>I like creating content online, including videos. You can find my socials below.</p>

@@ -1,5 +1,6 @@
-slideDiv = document.querySelector(".slides");
-scrollSvg = document.querySelector(".scrollsvg");
+const slideDiv = document.querySelector(".slides");
+const scrollSvg = document.querySelector(".scrollsvg");
+const interestSlideshow = document.querySelector('.passions .slideshow')
 
 slideDiv.addEventListener("scroll", function() {
   document.querySelector(".scrollsvg").style.display = "none";
@@ -8,6 +9,10 @@ slideDiv.addEventListener("scroll", function() {
 scrollSvg.addEventListener("click", function() {
   document.querySelector(".slide2").scrollIntoView({ behavior: "smooth" });
 }, { once: true });
+
+function isOverflown(element) {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
 
 // Function to check if the element is visible in the viewport
 const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
@@ -31,15 +36,21 @@ const waitForElementToBeVisible = (selector, instruction, partiallyVisible = fal
   }, checkInterval); // Check every 100ms by default
 };
 
+// Run for the about page slideshow (only if the slideshow is overflown)
+if (isOverflown(interestSlideshow)) waitForElementToBeVisible('.passions', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.passions .card').forEach((object) => object.classList.add('hintmove'));
+  }, 1000);
+});
+
 // Run for the slideshow
-waitForElementToBeVisible('.slideshow', () => {
+waitForElementToBeVisible('.project-slide .slideshow', () => {
   setTimeout(() => {
     document.querySelectorAll('.project').forEach((object) => object.classList.add('hintmove'));
   }, 1000);
 });
 
 const pointerScroll = (elem) => {
-
   const dragStart = (ev) => elem.setPointerCapture(ev.pointerId);
   const dragEnd = (ev) => elem.releasePointerCapture(ev.pointerId);
   const drag = (ev) => elem.hasPointerCapture(ev.pointerId) && (elem.scrollLeft -= ev.movementX);
@@ -50,3 +61,9 @@ const pointerScroll = (elem) => {
 };
 
 document.querySelectorAll(".horizontal-scroll").forEach(pointerScroll);
+
+// Check every 100 ms if the about page slideshow is overflown and if not, set the pointer events to none and the cursor to default
+setInterval(() => {
+  if (!isOverflown(interestSlideshow)) interestSlideshow.classList.remove('horizontal-scroll');
+  else interestSlideshow.classList.add('horizontal-scroll');
+}, 100);
