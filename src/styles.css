@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 100 900;
+    src: url("../jbmono/JetBrainsMono[wght].woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: italic;
+    font-weight: 100 900;
+    src: url("../jbmono/JetBrainsMono-Italic[wght].woff2") format("woff2");
+}
+
+* {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+html,
+body {
+    font-family: "JetBrains Mono", monospace;
+    scroll-behavior: smooth;
+    @apply text-gray-200;
+}
+
+.container {
+    @apply size-full min-w-full;
+}
+
+.card {
+    @apply rounded-2xl border-[0.5px] border-gray-500;
+}
+
+.page {
+    @apply overflow-y-scroll p-8 sm:p-10 lg:p-12 xl:p-16;
+}
+
+.card .container {
+    @apply flex flex-col gap-4 rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg lg:p-10;
+}
+
+.slideshow {
+    @apply flex w-full flex-grow flex-row gap-10 overflow-y-hidden overflow-x-scroll;
+}
+
+h2 {
+    @apply text-5xl lg:text-7xl;
+}
+
+h3 {
+    @apply text-2xl font-semibold lg:text-5xl;
+}
+
+h4 {
+    @apply mb-4 text-xl font-bold lg:text-3xl;
+}
+
+.passions .slideshow {
+    @apply gap-5 sm:gap-10;
+}
+
+.passion .container {
+    @apply min-w-52 sm:min-w-64 sm:p-8;
+}
+
+.passion header {
+    @apply flex h-10 w-full flex-row items-center gap-4 sm:h-14;
+}
+
+.passion img {
+    @apply pointer-events-none max-h-full rounded-lg bg-gradient-to-br p-2 sm:rounded-xl sm:p-3;
+}
+
+.passion h4 {
+    @apply mb-0 font-medium tracking-wider;
+}
+
+.passion p {
+    @apply text-xs sm:text-base;
+}
+
+.social-container {
+    @apply flex items-center justify-center rounded-xl bg-gradient-to-br p-[1px] sm:p-[1.5px] lg:rounded-full;
+}
+
+.socials a {
+    @apply flex h-full w-full items-center justify-center rounded-xl bg-gray-900 p-2 px-4 text-xs transition-colors hover:bg-gray-950 sm:text-sm lg:rounded-full lg:text-base;
+}
+
+.project-page > header > h3::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+.project .container header {
+    @apply flex h-14 flex-row items-center gap-4 lg:h-20;
+}
+
+.project .container {
+    @apply flex flex-col justify-between overflow-y-auto rounded-2xl bg-gray-600/20 p-4 backdrop-blur-lg lg:p-10;
+}
+
+.project h3 {
+    @apply text-xl lg:text-2xl xl:text-4xl;
+}
+
+.project:nth-of-type(1) {
+    background: url("./medias/sunbot-nobg.png") no-repeat right;
+    @apply bg-[size:20rem] bg-right md:bg-[size:35rem] md:bg-right-top;
+}
+
+.project:nth-of-type(2) {
+    background: url("./medias/me-logo.png") no-repeat right;
+    @apply bg-[size:15rem] bg-[right_1rem_center] md:bg-[size:30rem] md:bg-[right_2rem_top_2rem];
+}
+
+.project:nth-of-type(2) .container {
+    @apply backdrop-saturate-[0.8];
+}
+
+.project:nth-of-type(3) {
+    @apply relative;
+}
+
+.project:nth-of-type(3) .container {
+    @apply backdrop-blur-md;
+}
+
+.project:nth-of-type(4) {
+    background: url("./medias/arcane-logo.png") no-repeat right;
+    @apply bg-[size:15rem] bg-[right_1rem_center] md:bg-[size:25rem] md:bg-[right_3rem_top_3rem];
+}
+
+.raycast-background {
+    @apply absolute bottom-12 right-20 flex flex-col items-center brightness-75;
+}
+
+.raycast-background img {
+    @apply w-48;
+}
+
+.raycast-cider {
+    @apply rotate-12;
+}
+
+.raycast-lightshot {
+    @apply ml-40 mt-20 -rotate-12 sm:ml-80;
+}
+
+.technologies h3 {
+    @apply mb-4;
+}
+
+.proj-icon {
+    @apply inline h-full rounded-xl border-[0.5px] border-gray-500;
+    box-shadow:
+        0 0 0.5px 0 rgb(107 114 128) inset,
+        0 0 0.5px 0 rgb(107 114 128);
+}
+
+.project:nth-of-type(1) > .container > header > .proj-icon {
+    @apply border-gray-200;
+    box-shadow:
+        0 0 0.5px 0 rgb(229 231 235) inset,
+        0 0 0.5px 0 rgb(229 231 235);
+}
+
+.project .description {
+    @apply text-justify text-xs sm:text-base md:max-w-[50%];
+}
+
+.proj-button {
+    @apply flex h-full min-h-10 flex-row items-center justify-center gap-2 rounded-lg border-[0.25px] border-gray-500 bg-gray-600 bg-opacity-25 text-xl leading-6 backdrop-blur-lg transition-colors;
+    @apply transition-all hover:bg-opacity-55;
+    box-shadow:
+        0 0 0.25px 0 rgb(107 114 128) inset,
+        0 0 0.25px 0 rgb(107 114 128);
+    -webkit-backdrop-filter: none !important;
+}
+
+.discord-button {
+    @apply bg-blurple-200 bg-opacity-30 hover:bg-opacity-40;
+}
+
+.ed-button {
+    @apply bg-[#138DED] bg-opacity-25 hover:bg-opacity-35;
+}
+
+.raycast-button {
+    @apply bg-[#FF2362] bg-opacity-20 hover:bg-opacity-30;
+}
+
+.arcane-button {
+    @apply bg-black bg-opacity-25 hover:bg-opacity-35;
+}
+
+.proj-button img {
+    @apply w-5;
+}
+
+.tech-icons {
+    @apply text-5xl lg:text-6xl;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.tech-icons a {
+    @apply relative;
+}
+
+.tech-icons a:hover::after {
+    content: attr(aria-label);
+    @apply absolute -bottom-8 left-1/2 -translate-x-1/2 animate-[tooltipDown_0.2s_ease-out] rounded-lg bg-gray-200 px-2 py-1 text-center text-lg text-black;
+}
+
+.buttons {
+    @apply mt-4 flex max-h-40 flex-grow flex-col gap-2 justify-self-end *:flex-grow;
+}
+
+.devicon-discordjs-plain::before {
+    @apply text-blurple-100;
+}
+
+.handwave {
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+.social-inline {
+    @apply relative font-extrabold;
+}
+
+.social-inline:hover::before {
+    content: attr(aria-label);
+    @apply absolute -top-10 left-1/2 -translate-x-1/2 animate-[tooltipUp_0.2s_ease-out] text-nowrap rounded-lg bg-gray-200 px-2 py-1 text-center text-lg font-medium text-black;
+}
+
+.noselect {
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+.france-anim {
+    @apply *:transition-colors hover:animate-pulse;
+}
+
+.hintmove {
+    animation: hintMove 1s ease-in-out;
+}
+
+.horizontal-scroll {
+    user-select: none;
+    cursor: grab;
+}
+
+.horizontal-scroll:active {
+    cursor: grabbing;
+}
+
+@media (max-height: 600px) {
+    .scrollsvg {
+        display: none;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes tooltipDown {
+    0% {
+        @apply -bottom-7 opacity-50;
+    }
+    100% {
+        @apply -bottom-8 opacity-100;
+    }
+}
+
+@keyframes tooltipUp {
+    0% {
+        @apply -top-9 opacity-50;
+    }
+    100% {
+        @apply -top-10 opacity-100;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes hintMove {
+    0% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

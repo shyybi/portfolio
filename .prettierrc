@@ -1,0 +1,17 @@
+{
+  "overrides": [
+    {
+      "files": ["*.html", "*.css", "*.scss"],
+      "options": {
+        "plugins": ["prettier-plugin-tailwindcss"],
+        "semi": true,
+        "trailingComma": "none",
+        "tabWidth": 4,
+        "printWidth": 9999,
+        "proseWrap": "never",
+        "htmlWhitespaceSensitivity": "strict",
+        "bracketSameLine": true
+      }
+    }
+  ]
+}
