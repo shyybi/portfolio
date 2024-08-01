@@ -1,13 +1,16 @@
 const slideDiv = document.querySelector(".slides");
 const scrollSvg = document.querySelector(".scrollsvg");
-const interestSlideshow = document.querySelector(".passions .slideshow");
+
+function isOverflown(element) {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
 
 slideDiv.addEventListener("scroll", function() {
   document.querySelector(".scrollsvg").style.display = "none";
 }, { once: true });
 
 scrollSvg.addEventListener("click", function() {
-  document.querySelector(".slide2").scrollIntoView({ behavior: "smooth" });
+  document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
 }, { once: true });
 
 const pointerScroll = (elem) => {
@@ -27,3 +30,23 @@ setInterval(() => {
   if (!isOverflown(interestSlideshow)) interestSlideshow.classList.remove("horizontal-scroll");
   else interestSlideshow.classList.add("horizontal-scroll");
 }, 100);
+
+// Add event listeners to both arrows next to the projects slideshow to scroll the slideshow
+document.querySelector(".left-arrow").addEventListener("click", () => {
+  document.querySelector(".project-page .slideshow").scrollBy({ left: -document.querySelector(".project").clientWidth - 40, behavior: "smooth" });
+});
+
+document.querySelector(".right-arrow").addEventListener("click", () => {
+  document.querySelector(".project-page .slideshow").scrollBy({ left: document.querySelector(".project").clientWidth + 40, behavior: "smooth" });
+});
+
+slideDiv.addEventListener("scroll", () => {
+  const currentPos = slideDiv.scrollTop / slideDiv.clientHeight;
+  const currentPage = Math.round(currentPos) + 1;
+  if (Math.abs(currentPos - (currentPage - 1)) > 0.1) document.querySelector(".p-indicators").classList.add("moving");
+  else document.querySelector(".p-indicators").classList.remove("moving");
+  document.querySelector(".p-indicator:nth-child(" + currentPage + ")").classList.add("active");
+  document.querySelectorAll(".p-indicator:not(:nth-child(" + currentPage + "))").forEach((indicator) => indicator.classList.remove("active"));
+});
+
+slideDiv.dispatchEvent(new Event("scroll"));

@@ -24,6 +24,11 @@
         <meta name="twitter:creator" content="@feylidev" />
     </head>
     <body>
+        <div class="p-indicators fixed bottom-3 left-1/2 z-20 flex h-2 w-16 -translate-x-1/2 flex-row gap-2 transition-opacity *:h-full *:min-w-2 *:rounded-full *:bg-gray-200 *:transition-all">
+            <div class="p-indicator"></div>
+            <div class="p-indicator"></div>
+            <div class="p-indicator"></div>
+        </div>
         <div class="slides h-dvh snap-y snap-mandatory overflow-y-scroll *:h-dvh *:snap-start">
             <div class="page bg-gradient-to-bl from-orange-950 to-black text-gray-200">
                 <header class="h-full content-center">
@@ -34,20 +39,18 @@
                     <h2 class="pointer-events-none mb-10 select-none text-center">
                         <span class="handwave noselect">&#128075;</span>
                     </h2>
-                    <a href="#about">
-                        <svg class="scrollsvg absolute bottom-12 left-0.5 right-0.5 mx-auto size-2/12 animate-[bounce_1s_5.5,fadeOut_1s_forwards_5s] fill-gray-200 stroke-gray-200 stroke-1 sm:size-1/12" xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" xml:space="preserve">
-                            <g>
-                                <path d="M25 45a14 14 0 0 0 14-14V19a14 14 0 0 0-28 0v12a14 14 0 0 0 14 14zM13 19a12 12 0 0 1 24 0v12a12 12 0 0 1-24 0z" opacity="1" />
-                                <path d="M24 24.5h.09l.2.21a1 1 0 0 0 1.42 0l.2-.21H26v-.09l5.71-5.7-1.42-1.42-4.29 4.3V11h-2v10.59l-4.29-4.3-1.42 1.42 5.71 5.7z" opacity="1" />
-                            </g>
-                        </svg>
-                    </a>
+                    <svg class="scrollsvg absolute bottom-12 left-0.5 right-0.5 mx-auto size-2/12 animate-[bounce_1s_5.5,fadeOut_1s_forwards_5s] cursor-pointer fill-gray-200 stroke-gray-200 stroke-1 sm:size-1/12" xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" xml:space="preserve">
+                        <g>
+                            <path d="M25 45a14 14 0 0 0 14-14V19a14 14 0 0 0-28 0v12a14 14 0 0 0 14 14zM13 19a12 12 0 0 1 24 0v12a12 12 0 0 1-24 0z" opacity="1" />
+                            <path d="M24 24.5h.09l.2.21a1 1 0 0 0 1.42 0l.2-.21H26v-.09l5.71-5.7-1.42-1.42-4.29 4.3V11h-2v10.59l-4.29-4.3-1.42 1.42 5.71 5.7z" opacity="1" />
+                        </g>
+                    </svg>
                 </header>
             </div>
             <div id="about" class="page bg-gradient-to-br from-fuchsia-950 to-black">
-                <header class="flex h-full justify-around flex-col gap-5">
+                <header class="flex h-full flex-col justify-around gap-5">
                     <h3 class="text-3xl sm:text-5xl">About me</h3>
-                    <div class="text-sm sm:text-xl shrink">
+                    <div class="shrink text-sm sm:text-xl">
                         <p>I'm 16 years old, meaning I can drive in the USA and have a beer in Germany.</p>
                     </div>
                     <div class="passions grow">
@@ -134,122 +137,126 @@
             <div class="project-page page bg-gradient-to-br from-cyan-950 to-black">
                 <header class="flex h-full flex-col gap-5 sm:gap-8 lg:gap-10">
                     <h3 class="text-3xl sm:text-5xl">My projects</h3>
-                    <div class="slideshow h-full snap-x snap-mandatory flex-nowrap *:size-full *:min-h-full *:shrink-0 *:snap-start">
-                        <div class="project card">
-                            <div class="container">
-                                <header>
-                                    <img src="./medias/sunbot.png" alt="sunbot logo" class="proj-icon noselect" />
-                                    <h3>Sun</h3>
-                                </header>
-                                <p class="description">A multipurpose Discord bot anyone can use for free.</p>
-                                <div class="technologies">
-                                    <h3>Technologies</h3>
-                                    <div class="tech-icons">
-                                        <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
-                                        <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
-                                        <a href="https://discord.js.org" target="_blank" aria-label="discord.js"><i class="devicon-discordjs-plain colored"></i></a>
-                                        <a href="https://python.org" target="_blank" aria-label="Python"><i class="devicon-python-plain colored"></i></a>
-                                        <a href="https://mariaDB.org" target="_blank" aria-label="MariaDB"><i class="devicon-mariadb-plain"></i></a>
-                                        <a href="https://mysql.com" target="_blank" aria-label="MySQL"><i class="devicon-mysql-original"></i></a>
+                    <div class="relative h-full">
+                        <div class="left-arrow">&#10148;</div>
+                        <div class="right-arrow">&#10148;</div>
+                        <div class="slideshow h-full snap-x snap-mandatory flex-nowrap *:size-full *:min-h-full *:shrink-0 *:snap-start">
+                            <div class="project card">
+                                <div class="container">
+                                    <header>
+                                        <img src="./medias/sunbot.png" alt="sunbot logo" class="proj-icon noselect" />
+                                        <h3>Sun</h3>
+                                    </header>
+                                    <p class="description">A multipurpose Discord bot anyone can use for free.</p>
+                                    <div class="technologies">
+                                        <h3>Technologies</h3>
+                                        <div class="tech-icons">
+                                            <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
+                                            <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
+                                            <a href="https://discord.js.org" target="_blank" aria-label="discord.js"><i class="devicon-discordjs-plain colored"></i></a>
+                                            <a href="https://python.org" target="_blank" aria-label="Python"><i class="devicon-python-plain colored"></i></a>
+                                            <a href="https://mariaDB.org" target="_blank" aria-label="MariaDB"><i class="devicon-mariadb-plain"></i></a>
+                                            <a href="https://mysql.com" target="_blank" aria-label="MySQL"><i class="devicon-mysql-original"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="https://discord.com/oauth2/authorize?client_id=743826135061889028" target="_blank">
+                                            <p class="proj-button discord-button"><img src="./medias/clyde-logo.png" alt="discord logo" />Add the Bot</p>
+                                        </a>
+                                        <a href="https://github.com/feyli/sun" target="_blank">
+                                            <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />Browse Code</p>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="buttons">
-                                    <a href="https://discord.com/oauth2/authorize?client_id=743826135061889028" target="_blank">
-                                        <p class="proj-button discord-button"><img src="./medias/clyde-logo.png" alt="discord logo" />Add the Bot</p>
-                                    </a>
-                                    <a href="https://github.com/feyli/sun" target="_blank">
-                                        <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />Browse Code</p>
-                                    </a>
-                                </div>
                             </div>
-                        </div>
-                        <div class="project card">
-                            <div class="container">
-                                <header>
-                                    <img src="./medias/me-logo.png" alt="moyenne ecoledirecte logo" class="proj-icon noselect bg-gray-200/10 p-3" />
-                                    <h3>Moyenne EcoleDirecte</h3>
-                                </header>
-                                <p class="description">A website that calculates your average grades on EcoleDirecte per pre-set timespan.</p>
-                                <div class="technologies">
-                                    <h3>Technologies</h3>
-                                    <div class="tech-icons">
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" aria-label="HTML5"><i class="devicon-html5-plain-wordmark colored"></i></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" aria-label="CSS3"><i class="devicon-css3-plain-wordmark colored"></i></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
-                                        <a href="https://jquery.com" target="_blank" aria-label="jQuery"><i class="devicon-jquery-plain colored"></i></a>
-                                        <a href="https://pages.github.com" target="_blank" aria-label="GitHub Pages"><i class="devicon-githubactions-plain colored"></i></a>
+                            <div class="project card">
+                                <div class="container">
+                                    <header>
+                                        <img src="./medias/me-logo.png" alt="moyenne ecoledirecte logo" class="proj-icon noselect bg-gray-200/10 p-3" />
+                                        <h3>Moyenne EcoleDirecte</h3>
+                                    </header>
+                                    <p class="description">A website that calculates your average grades on EcoleDirecte per pre-set timespan.</p>
+                                    <div class="technologies">
+                                        <h3>Technologies</h3>
+                                        <div class="tech-icons">
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" aria-label="HTML5"><i class="devicon-html5-plain-wordmark colored"></i></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" aria-label="CSS3"><i class="devicon-css3-plain-wordmark colored"></i></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
+                                            <a href="https://jquery.com" target="_blank" aria-label="jQuery"><i class="devicon-jquery-plain colored"></i></a>
+                                            <a href="https://pages.github.com" target="_blank" aria-label="GitHub Pages"><i class="devicon-githubactions-plain colored"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="https://feyli.github.io/ecoledirecte-moyenne" target="_blank">
+                                            <p class="proj-button ed-button"><img src="./medias/website-icon.png" alt="website icon" />Open Website</p>
+                                        </a>
+                                        <a href="https://github.com/feyli/moyenne-ecoledirecte" target="_blank">
+                                            <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />Browse Code</p>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="buttons">
-                                    <a href="https://feyli.github.io/ecoledirecte-moyenne" target="_blank">
-                                        <p class="proj-button ed-button"><img src="./medias/website-icon.png" alt="website icon" />Open Website</p>
-                                    </a>
-                                    <a href="https://github.com/feyli/moyenne-ecoledirecte" target="_blank">
-                                        <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />Browse Code</p>
-                                    </a>
+                            </div>
+                            <div class="project card">
+                                <div class="raycast-background">
+                                    <img src="./medias/raycast-cider.png" alt="cider raycast extension logo" class="raycast-cider" />
+                                    <img src="./medias/raycast-lightshot.png" alt="lightshot raycast extension logo" class="raycast-lightshot" />
                                 </div>
-                            </div>
-                        </div>
-                        <div class="project card">
-                            <div class="raycast-background">
-                                <img src="./medias/raycast-cider.png" alt="cider raycast extension logo" class="raycast-cider" />
-                                <img src="./medias/raycast-lightshot.png" alt="lightshot raycast extension logo" class="raycast-lightshot" />
-                            </div>
-                            <div class="container">
-                                <header>
-                                    <img src="./medias/raycast-logo.png" alt="raycast logo" class="proj-icon noselect bg-black/70" />
-                                    <h3>Raycast Extensions</h3>
-                                </header>
-                                <p class="description">I have contributed to the Raycast Store by creating 2&nbsp;extensions and contributing to an existing one.</p>
-                                <div class="technologies">
-                                    <h3>Technologies</h3>
-                                    <div class="tech-icons">
-                                        <a href="https://reactjs.org" target="_blank" aria-label="React"><i class="devicon-react-original colored"></i></a>
-                                        <a href="https://www.typescriptlang.org" target="_blank" aria-label="TypeScript"><i class="devicon-typescript-plain colored"></i></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
-                                        <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
-                                        <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
-                                        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                                <div class="container">
+                                    <header>
+                                        <img src="./medias/raycast-logo.png" alt="raycast logo" class="proj-icon noselect bg-black/70" />
+                                        <h3>Raycast Extensions</h3>
+                                    </header>
+                                    <p class="description">I have contributed to the Raycast Store by creating 2&nbsp;extensions and contributing to an existing one.</p>
+                                    <div class="technologies">
+                                        <h3>Technologies</h3>
+                                        <div class="tech-icons">
+                                            <a href="https://reactjs.org" target="_blank" aria-label="React"><i class="devicon-react-original colored"></i></a>
+                                            <a href="https://www.typescriptlang.org" target="_blank" aria-label="TypeScript"><i class="devicon-typescript-plain colored"></i></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
+                                            <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
+                                            <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
+                                            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="https://raycast.com/feyli" target="_blank">
+                                            <p class="proj-button raycast-button"><img src="./medias/raycast-logo.png" alt="raycast logo" class="-mx-2.5 !w-10" />Go to Profile</p>
+                                        </a>
+                                        <a href="https://github.com/feyli/extensions" target="_blank">
+                                            <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />Browse Code</p>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="buttons">
-                                    <a href="https://raycast.com/feyli" target="_blank">
-                                        <p class="proj-button raycast-button"><img src="./medias/raycast-logo.png" alt="raycast logo" class="-mx-2.5 !w-10" />Go to Profile</p>
-                                    </a>
-                                    <a href="https://github.com/feyli/extensions" target="_blank">
-                                        <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />Browse Code</p>
-                                    </a>
-                                </div>
                             </div>
-                        </div>
-                        <div class="project card">
-                            <div class="container">
-                                <header>
-                                    <img src="./medias/arcane-logo.png" alt="arcane blades logo" class="proj-icon noselect" />
-                                    <h3>Arcane Blades</h3>
-                                </header>
-                                <p class="description">Arcane Blades is a Minecraft server created by <a href="https://www.youtube.com/@AdLanderHQ" class="social-inline text-red-500" aria-label="&#9099; Open YouTube">@platiniumstar</a>. I'm responsible for the website, the Minecraft plugins, the API and the various Discord systems.</p>
-                                <div class="technologies">
-                                    <h3>Technologies</h3>
-                                    <div class="tech-icons">
-                                        <a href="https://pages.github.com" target="_blank" aria-label="GitHub Pages"><i class="devicon-githubactions-plain colored"></i></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" aria-label="HTML5"><i class="devicon-html5-plain-wordmark colored"></i></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" aria-label="CSS3"><i class="devicon-css3-plain-wordmark colored"></i></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
-                                        <a href="https://java.com" target="_blank" aria-label="Java"><i class="devicon-java-plain colored"></i></a>
-                                        <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
-                                        <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
-                                        <a href="https://mariaDB.org" target="_blank" aria-label="MariaDB"><i class="devicon-mariadb-plain"></i></a>
-                                        <a href="https://mysql.com" target="_blank" aria-label="MySQL"><i class="devicon-mysql-original"></i></a>
+                            <div class="project card">
+                                <div class="container">
+                                    <header>
+                                        <img src="./medias/arcane-logo.png" alt="arcane blades logo" class="proj-icon noselect" />
+                                        <h3>Arcane Blades</h3>
+                                    </header>
+                                    <p class="description">Arcane Blades is a Minecraft server created by <a href="https://www.youtube.com/@AdLanderHQ" class="social-inline text-red-500" aria-label="&#9099; Open YouTube">@platiniumstar</a>. I'm responsible for the website, the Minecraft plugins, the API and the various Discord systems.</p>
+                                    <div class="technologies">
+                                        <h3>Technologies</h3>
+                                        <div class="tech-icons">
+                                            <a href="https://pages.github.com" target="_blank" aria-label="GitHub Pages"><i class="devicon-githubactions-plain colored"></i></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" aria-label="HTML5"><i class="devicon-html5-plain-wordmark colored"></i></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" aria-label="CSS3"><i class="devicon-css3-plain-wordmark colored"></i></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript"><i class="devicon-javascript-plain colored"></i></a>
+                                            <a href="https://java.com" target="_blank" aria-label="Java"><i class="devicon-java-plain colored"></i></a>
+                                            <a href="https://nodejs.org" target="_blank" aria-label="Node.js"><i class="devicon-nodejs-plain colored"></i></a>
+                                            <a href="https://npmjs.com" target="_blank" aria-label="npm"><i class="devicon-npm-original-wordmark colored"></i></a>
+                                            <a href="https://mariaDB.org" target="_blank" aria-label="MariaDB"><i class="devicon-mariadb-plain"></i></a>
+                                            <a href="https://mysql.com" target="_blank" aria-label="MySQL"><i class="devicon-mysql-original"></i></a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="buttons">
-                                    <a href="https://mcarcane.github.io" target="_blank">
-                                        <p class="proj-button arcane-button"><img src="./medias/website-icon.png" alt="website icon" />Open Website</p>
-                                    </a>
-                                    <a href="https://github.com/mcarcane" target="_blank">
-                                        <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />View Organization</p>
-                                    </a>
+                                    <div class="buttons">
+                                        <a href="https://mcarcane.github.io" target="_blank">
+                                            <p class="proj-button arcane-button"><img src="./medias/website-icon.png" alt="website icon" />Open Website</p>
+                                        </a>
+                                        <a href="https://github.com/mcarcane" target="_blank">
+                                            <p class="proj-button"><img src="./medias/github-white.png" alt="github logo" />View Organization</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
