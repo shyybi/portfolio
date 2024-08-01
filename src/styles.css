@@ -32,6 +32,26 @@ body {
     @apply text-gray-200;
 }
 
+.p-indicator {
+    transition-duration: 0.5s!important;
+}
+
+.p-indicators {
+    transition-duration: 0.25s!important;
+}
+
+.p-indicators.moving {
+    @apply opacity-25;
+}
+
+.p-indicator:not(.active) {
+    @apply shrink;
+}
+
+.p-indicator.active {
+    @apply grow;
+}
+
 .container {
     @apply size-full min-w-full;
 }
@@ -242,11 +262,6 @@ h4 {
     @apply relative;
 }
 
-.tech-icons a:hover::after {
-    content: attr(aria-label);
-    @apply absolute -bottom-8 left-1/2 -translate-x-1/2 animate-[tooltipDown_0.2s_ease-out] rounded-lg bg-gray-200 px-2 py-1 text-center text-lg text-black;
-}
-
 .buttons {
     @apply mt-4 flex max-h-40 flex-grow flex-col gap-2 justify-self-end *:flex-grow;
 }
@@ -301,6 +316,13 @@ h4 {
 
     .hintmove {
         animation: hintMove 1s ease-in-out;
+    }
+}
+
+@media (pointer: fine) {
+    .tech-icons a:hover::after {
+        content: attr(aria-label);
+        @apply absolute -bottom-8 left-1/2 -translate-x-1/2 animate-[tooltipDown_0.2s_ease-out] rounded-lg bg-gray-200 px-2 py-1 text-center text-lg text-black;
     }
 }
 

@@ -33,9 +33,20 @@ setInterval(() => {
 
 // Add event listeners to both arrows next to the projects slideshow to scroll the slideshow
 document.querySelector(".left-arrow").addEventListener("click", () => {
-  document.querySelector(".project-page .slideshow").scrollBy({ left: -document.querySelector('.project').clientWidth - 40, behavior: "smooth" });
+  document.querySelector(".project-page .slideshow").scrollBy({ left: -document.querySelector(".project").clientWidth - 40, behavior: "smooth" });
 });
 
 document.querySelector(".right-arrow").addEventListener("click", () => {
-  document.querySelector(".project-page .slideshow").scrollBy({ left: document.querySelector('.project').clientWidth + 40, behavior: "smooth" });
+  document.querySelector(".project-page .slideshow").scrollBy({ left: document.querySelector(".project").clientWidth + 40, behavior: "smooth" });
 });
+
+slideDiv.addEventListener("scroll", () => {
+  const currentPos = slideDiv.scrollTop / slideDiv.clientHeight;
+  const currentPage = Math.round(currentPos) + 1;
+  if (Math.abs(currentPos - (currentPage - 1)) > 0.1) document.querySelector(".p-indicators").classList.add("moving");
+  else document.querySelector(".p-indicators").classList.remove("moving");
+  document.querySelector(".p-indicator:nth-child(" + currentPage + ")").classList.add("active");
+  document.querySelectorAll(".p-indicator:not(:nth-child(" + currentPage + "))").forEach((indicator) => indicator.classList.remove("active"));
+});
+
+slideDiv.dispatchEvent(new Event("scroll"));

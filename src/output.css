@@ -596,6 +596,10 @@ video {
   visibility: visible;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -608,6 +612,10 @@ video {
   bottom: 3rem;
 }
 
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -616,12 +624,20 @@ video {
   left: 0.125rem;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
 .right-0 {
   right: 0px;
 }
 
 .right-0\.5 {
   right: 0.125rem;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .-mx-2 {
@@ -656,6 +672,10 @@ video {
   height: 16.666667%;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .h-dvh {
   height: 100dvh;
 }
@@ -668,12 +688,21 @@ video {
   width: 2.5rem !important;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .shrink {
   flex-shrink: 1;
 }
 
 .grow {
   flex-grow: 1;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes bounce {
@@ -999,6 +1028,12 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 @font-face {
   font-family: "JetBrains Mono";
 
@@ -1037,6 +1072,26 @@ body {
   scroll-behavior: smooth;
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.p-indicator {
+  transition-duration: 0.5s!important;
+}
+
+.p-indicators {
+  transition-duration: 0.25s!important;
+}
+
+.p-indicators.moving {
+  opacity: 0.25;
+}
+
+.p-indicator:not(.active) {
+  flex-shrink: 1;
+}
+
+.p-indicator.active {
+  flex-grow: 1;
 }
 
 .container {
@@ -1633,28 +1688,6 @@ h4 {
   position: relative;
 }
 
-.tech-icons a:hover::after {
-  content: attr(aria-label);
-  position: absolute;
-  bottom: -2rem;
-  left: 50%;
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  animation: tooltipDown 0.2s ease-out;
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  text-align: center;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .buttons {
   margin-top: 1rem;
   display: flex;
@@ -1755,6 +1788,30 @@ h4 {
 
   .hintmove {
     animation: hintMove 1s ease-in-out;
+  }
+}
+
+@media (pointer: fine) {
+  .tech-icons a:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    animation: tooltipDown 0.2s ease-out;
+    border-radius: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
 
@@ -1862,8 +1919,16 @@ h4 {
   height: 100dvh;
 }
 
+.\*\:h-full > * {
+  height: 100%;
+}
+
 .\*\:min-h-full > * {
   min-height: 100%;
+}
+
+.\*\:min-w-2 > * {
+  min-width: 0.5rem;
 }
 
 .\*\:shrink-0 > * {
@@ -1872,6 +1937,21 @@ h4 {
 
 .\*\:snap-start > * {
   scroll-snap-align: start;
+}
+
+.\*\:rounded-full > * {
+  border-radius: 9999px;
+}
+
+.\*\:bg-gray-200 > * {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.\*\:transition-all > * {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .group:hover .group-hover\:text-blue-600 {
