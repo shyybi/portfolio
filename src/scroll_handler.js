@@ -47,7 +47,7 @@ const updatePageIndicator = () => {
   else document.querySelector(".p-indicators").classList.remove("moving");
   document.querySelector(".p-indicator:nth-child(" + currentPage + ")").classList.add("active");
   document.querySelectorAll(".p-indicator:not(:nth-child(" + currentPage + "))").forEach((indicator) => indicator.classList.remove("active"));
-}
+};
 
 slideDiv.addEventListener("scroll", () => updatePageIndicator());
 
