@@ -33,11 +33,11 @@ body {
 }
 
 .p-indicator {
-    transition-duration: 0.5s!important;
+    transition-duration: 0.5s !important;
 }
 
 .p-indicators {
-    transition-duration: 0.25s!important;
+    transition-duration: 0.25s !important;
 }
 
 .p-indicators.moving {
@@ -126,28 +126,16 @@ h4 {
 }
 
 .left-arrow {
-    scale: -1;
-    @apply -left-8 lg:-left-10 xl:-left-12;
-}
-
-.right-arrow {
-    @apply -right-8 lg:-right-10 xl:-right-12;
+    rotate: 180deg;
 }
 
 .left-arrow,
 .right-arrow {
-    translate: 0 -50%;
-    animation: hintMove 1s ease-in-out infinite;
-    @apply absolute top-1/2 cursor-pointer select-none text-5xl text-gray-200 transition-all xl:text-6xl;
-}
-
-.left-arrow:hover,
-.right-arrow:hover {
-    @apply text-gray-400;
+    @apply cursor-pointer select-none transition-all h-10;
 }
 
 .project .container header {
-    @apply flex h-14 flex-row items-center gap-4 lg:h-20;
+    @apply flex max-h-16 flex-row grow items-center gap-4 lg:h-20;
 }
 
 .project .container {
@@ -220,7 +208,7 @@ h4 {
 }
 
 .project .description {
-    @apply text-justify text-xs sm:text-base md:max-w-[50%];
+    @apply text-justify text-sm sm:text-base xl:text-xl md:max-w-[50%];
 }
 
 .proj-button {
