@@ -773,6 +773,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-around {
   justify-content: space-around;
 }
@@ -795,6 +799,11 @@ video {
 
 .bg-gray-200\/10 {
   background-color: rgb(229 231 235 / 0.1);
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-bl {
