@@ -7,6 +7,10 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 ::before,
 ::after {
@@ -898,6 +902,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-green-700 {
+  --tw-gradient-from: #15943b var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(190 24 93 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .from-white {
   --tw-gradient-from: #fff var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -939,6 +948,9 @@ video {
 
 .to-orange-900 {
   --tw-gradient-to: #7c2d12 var(--tw-gradient-to-position);
+}
+.to-green-500 {
+  --tw-gradient-to: #16a34a var(--tw-gradient-to-position);
 }
 
 .to-pink-700 {
@@ -1031,10 +1043,20 @@ video {
   --tw-text-opacity: 1;
   color: rgb(234 88 12 / var(--tw-text-opacity));
 }
-
+.text-pink-900 {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.gradient-bg{
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .transition-opacity {
@@ -1417,7 +1439,7 @@ h4 {
 }
 
 .project:nth-of-type(1) {
-  background: url("./medias/sunbot-nobg.png") no-repeat right;
+  background: url("./medias/ClochettesGames.png") no-repeat right;
   background-size: 20rem;
   background-position: right;
 }
@@ -1430,7 +1452,7 @@ h4 {
 }
 
 .project:nth-of-type(2) {
-  background: url("./medias/me-logo.png") no-repeat right;
+  background: url("./medias/jarvis.png") no-repeat right;
   background-size: 15rem;
   background-position: right 1rem center;
 }
@@ -1449,17 +1471,25 @@ h4 {
 }
 
 .project:nth-of-type(3) {
-  position: relative;
+  background: url("./medias/SmashSession.png") no-repeat right;
+  background-size: 15rem;
+  background-position: right 1rem center;
+}
+@media (min-width: 768px) {
+  .project:nth-of-type(3) {
+    background-size: 30rem;
+    background-position: right 2rem top 2rem;
+  }
 }
 
 .project:nth-of-type(3) .container {
-  --tw-backdrop-blur: blur(12px);
+  --tw-backdrop-saturate: saturate(0.8);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .project:nth-of-type(4) {
-  background: url("./medias/arcane-logo.png") no-repeat right;
+  background: url("./medias/NintendoSwitchUi.png") no-repeat right;
   background-size: 15rem;
   background-position: right 1rem center;
 }
@@ -1471,6 +1501,28 @@ h4 {
   }
 }
 
+.project:nth-of-type(5) {
+  background: url("./medias/SecurityCam.png") no-repeat right;
+  background-size: 15rem;
+  background-position: right 1rem center;
+}
+.project:nth-of-type(4) .container {
+  --tw-backdrop-saturate: saturate(0.8);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+@media (min-width: 768px) {
+  .project:nth-of-type(5) {
+    background-size: 30rem;
+    background-position: right 2rem top 2rem;
+  }
+}
+
+.project:nth-of-type(5) .container {
+  --tw-backdrop-saturate: saturate(0.8);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
 .raycast-background {
   position: absolute;
   bottom: 3rem;
